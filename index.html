@@ -4,9 +4,76 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
-		<title>Document</title>
+		<title>Library</title>
 	</head>
 	<body>
+		<!-- Header -->
+
+		<div class="container">
+			<header>
+				<div class="title-container">
+					<img src="./assets/library-outline.svg" alt="logo" />
+					<h1>Book Tracker</h1>
+				</div>
+				<p>
+					Track both the books you have read, <br />
+					and those you wish to read
+				</p>
+			</header>
+			<!-- Tool Bar -->
+			<div class="tool-bar">
+				<div class="form-row">
+					<label for="search">Search</label>
+					<input type="search" name="search" />
+				</div>
+				<div class="form-row">
+					<label for="sort-by" id="sort-by-label">Sort by:</label>
+					<select name="sort-by" id="sort-by-menu">
+						<option value="newest">Newest</option>
+						<option value="oldest">Oldest</option>
+						<option value="atoz">A to Z</option>
+						<option value="ztoa">Z to A</option>
+					</select>
+				</div>
+				<div class="form-row">
+					<label for="read">
+						<input
+							type="checkbox"
+							id="read"
+							name="read"
+							value="read"
+						/>
+						<span>Read</span>
+					</label>
+				</div>
+				<label for="not-read">
+					<input
+						type="checkbox"
+						id="not-read"
+						name="not-read"
+						value="not-read"
+					/>
+					<span>Not read</span>
+				</label>
+			</div>
+			<!-- Library Container -->
+
+			<div class="book-container">
+				<div id="add-book">
+					<svg
+						id="plus-symbol"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+					>
+						<title>plus-box-outline</title>
+						<path
+							d="M19,19V5H5V19H19M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5C3,3.89 3.9,3 5,3H19M11,7H13V11H17V13H13V17H11V13H7V11H11V7Z"
+						/>
+					</svg>
+				</div>
+			</div>
+		</div>
+
 		<script src="app.js"></script>
 	</body>
 </html>

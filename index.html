@@ -36,22 +36,22 @@
 					</select>
 				</div>
 				<div class="form-row">
-					<label for="read">
+					<label for="filter-read">
 						<input
 							type="checkbox"
-							id="read"
-							name="read"
-							value="read"
+							id="filter-read"
+							name="filter-read"
+							value="filter-read"
 						/>
 						<span>Read</span>
 					</label>
 				</div>
-				<label for="not-read">
+				<label for="filter-not-read">
 					<input
 						type="checkbox"
-						id="not-read"
-						name="not-read"
-						value="not-read"
+						id="filter-not-read"
+						name="filter-not-read"
+						value="filter-not-read"
 					/>
 					<span>Not read</span>
 				</label>
@@ -76,9 +76,55 @@
 
 		<!-- New Book Modal -->
 		<dialog class="new-book-modal">
-			<p>Fancy new Modal</p>
+			<h1>Add new book</h1>
+			<br />
+			<form>
+				<div class="form-row">
+					<label for="title">Title</label
+					><input
+						autofocus
+						type="text"
+						name="title"
+						id="title"
+						placeholder="Enter book title"
+					/>
+				</div>
+				<div class="form-row">
+					<label for="author">Author</label
+					><input
+						type="text"
+						name="author"
+						id="author"
+						placeholder="Enter book author"
+					/>
+				</div>
+				<div class="form-row">
+					<label for="pages">Pages</label
+					><input
+						type="number"
+						name="pages"
+						id="pages"
+						placeholder="Enter number of pages"
+					/>
+				</div>
+				<div class="form-row">
+					<label for="read"
+						><span>Has been read?</span
+						><input
+							type="checkbox"
+							name="read"
+							id="read"
+							value="has-been-read"
+					/></label>
+				</div>
+				<div class="button-container">
+					<button class="add-modal" type="submit">Submit</button
+					><button class="add-modal" type="reset">Reset</button>
+				</div>
+			</form>
 			<button id="modal-close">Close</button>
 		</dialog>
+
 		<script src="app.js"></script>
 	</body>
 </html>

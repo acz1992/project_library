@@ -1,13 +1,5 @@
 To do:
 
-Javascript:
-
--Define static methods that allow sort functions
--Explore search function
-
-Tomorrow:
-
--Create form in Modal where user can add title, author, pages and whether book has been read or not
 -add submit button (with event.preventDefault() to stop data being sent to server)
 
 -Manually Add books for loop purposes (and to test sort/ search)
@@ -20,3 +12,11 @@ Tomorrow:
 
 -add button to book display that changes "read" status:
 -will require a function that toggles books read status on book Prototype instance
+
+Javascript:
+-Define static methods that allow sort functions
+-Explore search function
+
+Completed:
+-Set out and style page structure
+-Create form in Modal where user can add title, author, pages and whether book has been read or not

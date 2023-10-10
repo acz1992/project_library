@@ -5,7 +5,7 @@
 class Book {
 	constructor(title, author, pages, read) {
 		this.title = title;
-		this.authot = author;
+		this.author = author;
 		this.pages = pages;
 		this.read = read;
 	}
@@ -52,7 +52,7 @@ const newBookModal = document.querySelector(".new-book-modal");
 const modalClose = document.querySelector("#modal-close");
 
 addBookButton.addEventListener("click", () => {
-	newBookModal.showModal();
+	newBookModal.show();
 });
 
 modalClose.addEventListener("click", () => {

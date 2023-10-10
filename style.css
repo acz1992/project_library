@@ -10,7 +10,7 @@ body {
 	width: 100vw;
 	font-family: "Gabarito", cursive;
 	background-image: url(./assets/background2.jpg);
-	background-size: contain;
+	background-size: cover;
 }
 
 .container {
@@ -95,7 +95,7 @@ img[alt="logo"] {
 }
 
 #add-book:hover {
-	transform: scale(1.1);
+	transform: scale(1.01);
 }
 
 #plus-symbol {
@@ -113,12 +113,14 @@ img[alt="logo"] {
 	transform: scale(1.2);
 }
 
-/* New Book modal styling */
+/* /////////////// */
+/* New Book Modal  */
+/* /////////////// */
 
 .new-book-modal {
-	height: 400px;
 	width: 300px;
 	position: fixed;
+	height: 380px;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -152,4 +154,76 @@ img[alt="logo"] {
 	left: 0.1em;
 	text-indent: 0;
 	content: "\00D7";
+}
+
+.new-book-modal h1 {
+	font-size: 22px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid rgba(138, 136, 136, 0.5);
+	width: fit-content;
+}
+
+form {
+	padding: 5px;
+	font-size: 18px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.form-row {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	gap: 5px;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+label[for="read"] {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+input[type="text"],
+input[type="number"] {
+	width: 100%;
+	border: 1px solid grey;
+	border-radius: 2px;
+}
+
+input[placeholder] {
+	padding: 2px 0px 2px 5px;
+	font-size: 14px;
+}
+
+.button-container {
+	display: flex;
+	gap: 20px;
+}
+
+.add-modal {
+	width: 50%;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 18px;
+	font-weight: 600;
+	color: black;
+	border: none;
+}
+
+button[type="submit"] {
+	background-color: #baffc9;
+}
+button[type="submit"]:active {
+	background-color: #6df78b;
+}
+
+button[type="reset"] {
+	background-color: #ffb3ba;
+}
+button[type="reset"]:active {
+	background-color: #f57582;
 }

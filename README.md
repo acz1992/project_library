@@ -1,5 +1,9 @@
-To do:
+Today:
+-Create card layout
+-create dummy cards
+-create function that loops cards into Library array so they appear on container
 
+To do:
 -add submit button (with event.preventDefault() to stop data being sent to server)
 
 -Manually Add books for loop purposes (and to test sort/ search)
@@ -20,3 +24,7 @@ Javascript:
 Completed:
 -Set out and style page structure
 -Create form in Modal where user can add title, author, pages and whether book has been read or not
+
+Future Iterations:
+-Add text input to allow a brief blurb for each book
+-Add Genres and ability to sort by genres

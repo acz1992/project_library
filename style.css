@@ -76,11 +76,11 @@ img[alt="logo"] {
 
 .book-container {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	flex-wrap: wrap;
 	margin: 2% 10%;
+	width: 100%;
 
-	display: flex;
 	gap: 26px;
 }
 
@@ -131,6 +131,7 @@ img[alt="logo"] {
 	border: 1px solid #ccc;
 
 	padding: 20px;
+	z-index: 1000;
 }
 
 #modal-close {
@@ -250,11 +251,11 @@ button[type="reset"]:active {
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
-#first-book {
+.green-background {
 	background-color: #baffc9;
 }
 
-#second-book {
+.red-background {
 	background-color: #faa0a0;
 }
 

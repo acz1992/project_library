@@ -1,17 +1,10 @@
 Today:
--Create card layout
--create dummy cards
+
 -create function that loops cards into Library array so they appear on container
 
 To do:
--add submit button (with event.preventDefault() to stop data being sent to server)
 
--Manually Add books for loop purposes (and to test sort/ search)
-
--Write function that loops through array and displays each book on page
-
--write function that adds new book to library array (creates new instance of book prototype)
-
+-add feature that allows user to edit cards
 -add button and create event that removes book from library
 
 -add button to book display that changes "read" status:

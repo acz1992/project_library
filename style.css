@@ -120,7 +120,8 @@ img[alt="logo"] {
 /* New Book Modal  */
 /* /////////////// */
 
-.new-book-modal {
+.new-book-modal,
+.edit-book-modal {
 	width: 300px;
 	position: fixed;
 	height: 380px;
@@ -135,7 +136,8 @@ img[alt="logo"] {
 	z-index: 1000;
 }
 
-#modal-close {
+#new-modal-close,
+#edit-modal-close {
 	position: absolute;
 	top: 0.3em;
 	right: 0.3em;
@@ -151,7 +153,8 @@ img[alt="logo"] {
 	outline: none;
 }
 
-#modal-close::after {
+#new-modal-close::after,
+#edit-modal-close::after {
 	position: absolute;
 	line-height: 0.5;
 	top: 0.2em;
@@ -160,7 +163,8 @@ img[alt="logo"] {
 	content: "\00D7";
 }
 
-.new-book-modal h1 {
+.new-book-modal h1,
+.edit-book-modal h1 {
 	font-size: 22px;
 	padding-bottom: 10px;
 	border-bottom: 1px solid rgba(138, 136, 136, 0.5);
@@ -185,7 +189,8 @@ form {
 	font-weight: 600;
 }
 
-label[for="read"] {
+label[for="read"],
+label[for="edit-read"] {
 	display: flex;
 	gap: 10px;
 	align-items: center;
@@ -199,6 +204,9 @@ input[type="number"] {
 }
 
 input[placeholder] {
+	font-size: 14px;
+}
+input {
 	padding: 2px 0px 2px 5px;
 	font-size: 14px;
 }
@@ -208,7 +216,8 @@ input[placeholder] {
 	gap: 20px;
 }
 
-.add-modal {
+.add-modal,
+#confirm-edit-button {
 	width: 50%;
 	padding: 10px;
 	border-radius: 5px;
@@ -218,10 +227,12 @@ input[placeholder] {
 	border: none;
 }
 
-button[type="submit"] {
+button[type="submit"],
+#confirm-edit-button {
 	background-color: #baffc9;
 }
-button[type="submit"]:active {
+button[type="submit"]:active,
+#confirm-edit-button:active {
 	background-color: #6df78b;
 }
 
@@ -306,4 +317,13 @@ button[type="reset"]:active {
 
 .book-card-buttons {
 	height: 30px;
+}
+
+/* //////////////// */
+/* Edit Book Modal  */
+/* //////////////// */
+
+.edit-button-container {
+	display: flex;
+	justify-content: center;
 }

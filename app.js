@@ -88,6 +88,17 @@ function displayLibrary() {
 			openEditModal(bookIndex);
 		});
 
+		const deleteButton = card.querySelector(".book-delete");
+		deleteButton.addEventListener("click", () => {
+			// Grab dataset associated with each Book instace
+			const bookIndex = card.dataset.index;
+			// Remove the book from myLibrary array
+			myLibrary.splice(bookIndex, 1);
+
+			// Refresh the displayed book cards
+			displayLibrary();
+		});
+
 		bookContainer.appendChild(card);
 	}
 }
@@ -177,3 +188,5 @@ const editModalClose = document.querySelector("#edit-modal-close");
 editModalClose.addEventListener("click", () => {
 	editBookModal.close();
 });
+
+/* Remove */

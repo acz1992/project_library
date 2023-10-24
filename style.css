@@ -294,9 +294,6 @@ button[type="reset"]:active {
 	font-size: 22px;
 }
 
-.read-status {
-}
-
 .book-card-bottom {
 	width: 100%;
 	height: 100%;
@@ -317,6 +314,11 @@ button[type="reset"]:active {
 
 .book-card-buttons {
 	height: 30px;
+}
+
+.book-edit:active,
+.book-delete:active {
+	transform: scale(1.2);
 }
 
 /* //////////////// */

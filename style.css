@@ -77,9 +77,10 @@ img[alt="logo"] {
 .book-container {
 	display: flex;
 	justify-content: flex-start;
+	width: fit-content;
 	flex-wrap: wrap;
 	margin: 2% 10%;
-	width: 100%;
+	/* width: 100%; */
 
 	gap: 26px;
 }

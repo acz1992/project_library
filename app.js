@@ -27,6 +27,8 @@ function displayLibrary() {
 	for (let i = 0; i < myLibrary.length; i++) {
 		const book = myLibrary[i];
 		const card = document.createElement("div");
+		// Associate the card with the book's index
+		card.dataset.index = i;
 		card.className = "book-card";
 
 		if (book.read) {
@@ -77,6 +79,15 @@ function displayLibrary() {
 				
 	`;
 
+		const editButton = card.querySelector(".book-edit");
+		editButton.addEventListener("click", () => {
+			// Grab dataset associated with each Book instace
+			const bookIndex = card.dataset.index;
+			editBookModal.dataset.index = bookIndex;
+			// Pass associated instance to opeEditModal
+			openEditModal(bookIndex);
+		});
+
 		bookContainer.appendChild(card);
 	}
 }
@@ -87,7 +98,7 @@ function displayLibrary() {
 
 const addBookButton = document.querySelector("#plus-symbol");
 const newBookModal = document.querySelector(".new-book-modal");
-const modalClose = document.querySelector("#modal-close");
+const modalClose = document.querySelector("#new-modal-close");
 const submitButton = document.querySelector('button[type="submit"');
 
 addBookButton.addEventListener("click", () => {
@@ -111,7 +122,58 @@ submitButton.addEventListener("click", (event) => {
 	newBookModal.close();
 });
 
-/* Edit Card */
+///////////////////
+/* Edit & Remove */
+///////////////////
 
-const editButton = document.querySelector(".edit-button");
-editButton.addEventListener("click", (event) => {});
+/* Edit */
+
+const editBookModal = document.querySelector(".edit-book-modal");
+
+function openEditModal(bookIndex) {
+	const book = myLibrary[bookIndex];
+
+	// Fill the edit form fields with the book's details
+	document.getElementById("edit-title").value = book.title;
+	document.getElementById("edit-author").value = book.author;
+	document.getElementById("edit-pages").value = book.pages;
+	document.getElementById("edit-read").checked = book.read;
+
+	// Set the bookIndex in the dataset of the edit modal
+	editBookModal.dataset.index = bookIndex;
+
+	editBookModal.show();
+
+	// Remove any previous event listeners from the "Confirm" button
+	// Stops bug that changes all card
+	const previousConfirmEditButton = document.querySelector(
+		"#confirm-edit-button"
+	);
+	if (previousConfirmEditButton) {
+		const newConfirmEditButton = previousConfirmEditButton.cloneNode(true);
+		previousConfirmEditButton.parentNode.replaceChild(
+			newConfirmEditButton,
+			previousConfirmEditButton
+		);
+	}
+
+	// Add an event listener to Confirm button
+	const confirmEditButton = document.querySelector("#confirm-edit-button");
+	confirmEditButton.addEventListener("click", () => {
+		// Retrieve the bookIndex from the dataset of the edit modal
+		const bookIndex = editBookModal.dataset.index;
+		// Update the book object with the edited details
+		book.title = document.getElementById("edit-title").value;
+		book.author = document.getElementById("edit-author").value;
+		book.pages = document.getElementById("edit-pages").value;
+		book.read = document.getElementById("edit-read").checked;
+
+		displayLibrary();
+		editBookModal.close();
+	});
+}
+
+const editModalClose = document.querySelector("#edit-modal-close");
+editModalClose.addEventListener("click", () => {
+	editBookModal.close();
+});

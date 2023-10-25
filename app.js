@@ -188,5 +188,3 @@ const editModalClose = document.querySelector("#edit-modal-close");
 editModalClose.addEventListener("click", () => {
 	editBookModal.close();
 });
-
-/* Remove */

@@ -47,9 +47,7 @@ function displayLibrary() {
 						</p>
 					</div>
 					<p class="book-pages">Length: <span>${book.pages} pages</span></p>
-					<p class="read-status">Status: <span>${
-						book.read ? "Read" : "Not Read"
-					}</span></p>
+					<p class="read-status">Read? <span>${book.read ? "Read" : "Not Read"}</span></p>
 
 					<div class="book-card-bottom">
 
@@ -187,4 +185,21 @@ function openEditModal(bookIndex) {
 const editModalClose = document.querySelector("#edit-modal-close");
 editModalClose.addEventListener("click", () => {
 	editBookModal.close();
+});
+
+/////////////////
+/* Read Toggle */
+/////////////////
+
+const bookContainer = document.querySelector(".book-container");
+bookContainer.addEventListener("click", (event) => {
+	const target = event.target;
+	if (target.classList.contains("read-status")) {
+		// Retrieve the dataset index associated with the clicked card
+		const bookIndex = target.closest(".book-card").dataset.index;
+		// Toggle the read property of the book
+		myLibrary[bookIndex].read = !myLibrary[bookIndex].read;
+		// Update the displayed library
+		displayLibrary();
+	}
 });

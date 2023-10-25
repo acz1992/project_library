@@ -251,7 +251,7 @@ button[type="reset"]:active {
 	height: 400px;
 	width: 300px;
 	border-radius: 5px;
-	padding: 20px;
+	padding: 20px 20px 10px 20px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -296,20 +296,35 @@ button[type="reset"]:active {
 
 .book-card-bottom {
 	width: 100%;
-	height: 100%;
 	display: flex;
-	align-items: end;
-	justify-content: flex-end;
+	margin-top: auto;
+	border-top: 1px solid rgba(138, 136, 136, 0.5);
+
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 5px;
+}
+
+#read-symbol,
+#not-read-symbol {
+	padding-top: 5px;
+	height: 30px;
+	aspect-ratio: 1/1;
+}
+
+.read-status {
+	display: flex;
+	align-items: center;
+	gap: 5px;
 }
 
 .card-buttons-container {
 	display: flex;
-	justify-content: flex-end;
 
 	gap: 10px;
-	margin-top: auto;
-	border-top: 1px solid rgba(138, 136, 136, 0.5);
-	padding-top: 8px;
+	/* margin-top: auto; */
+
+	/* padding-top: 8px; */
 }
 
 .book-card-buttons {
@@ -329,3 +344,7 @@ button[type="reset"]:active {
 	display: flex;
 	justify-content: center;
 }
+
+/* ///////////// */
+/* Read toggle  */
+/* /////////// */

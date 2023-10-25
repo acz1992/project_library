@@ -209,3 +209,7 @@ bookContainer.addEventListener("click", (event) => {
 		displayLibrary();
 	}
 });
+
+/////////////////////
+/* Search Function */
+/////////////////////

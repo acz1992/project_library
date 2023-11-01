@@ -210,6 +210,23 @@ bookContainer.addEventListener("click", (event) => {
 	}
 });
 
-/////////////////////
-/* Search Function */
-/////////////////////
+////////////////
+/* Sort Menus */
+////////////////
+
+const sortSelect = document.getElementById("sort-by-menu");
+sortSelect.addEventListener("change", () => {
+	const selectedValue = sortSelect.value;
+
+	if (selectedValue === "atoz") {
+		myLibrary.sort((a, b) => a.title.localeCompare(b.title));
+		displayLibrary();
+	} else if (selectedValue === "ztoa") {
+		myLibrary.sort((a, b) => b.title.localeCompare(a.title));
+		displayLibrary();
+	}
+});
+
+////////////////
+/* Filter Menu */
+////////////////

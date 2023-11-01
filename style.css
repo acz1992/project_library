@@ -70,6 +70,24 @@ img[alt="logo"] {
 	margin: 0 100px;
 }
 
+.toolBar-form-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+label[for] span {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.form-row,
+.toolBar-form-row {
+	gap: 5px;
+	font-size: 16px;
+	font-weight: 600;
+}
+
 /* ////////////// */
 /* Book Container */
 /* ////////////// */
@@ -183,10 +201,6 @@ form {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-
-	gap: 5px;
-	font-size: 16px;
-	font-weight: 600;
 }
 
 label[for="read"],

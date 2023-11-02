@@ -105,6 +105,7 @@ function displayLibrary() {
 
 		bookContainer.appendChild(card);
 	}
+	updateBookDisplay();
 }
 
 ///////////

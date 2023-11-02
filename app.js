@@ -117,6 +117,15 @@ const modalClose = document.querySelector("#new-modal-close");
 const submitButton = document.querySelector('button[type="submit"');
 
 addBookButton.addEventListener("click", () => {
+	// Clear the form fields
+	const titleInput = document.getElementById("title");
+	const authorInput = document.getElementById("author");
+	const pagesInput = document.getElementById("pages");
+	const readInput = document.getElementById("read");
+	titleInput.value = "";
+	authorInput.value = "";
+	pagesInput.value = "";
+	readInput.checked = false;
 	newBookModal.show();
 });
 
@@ -130,10 +139,8 @@ submitButton.addEventListener("click", (event) => {
 	const author = document.getElementById("author").value;
 	const pages = document.getElementById("pages").value;
 	const read = document.getElementById("read").checked;
-
 	addBookToLibrary(title, author, pages, read);
 	displayLibrary();
-
 	newBookModal.close();
 });
 

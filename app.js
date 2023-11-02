@@ -207,6 +207,7 @@ bookContainer.addEventListener("click", (event) => {
 		myLibrary[bookIndex].read = !myLibrary[bookIndex].read;
 		// Update the displayed library
 		displayLibrary();
+		updateBookDisplay();
 	}
 });
 

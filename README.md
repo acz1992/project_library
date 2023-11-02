@@ -1,7 +1,8 @@
 To do:
--fix form remembering text from last time
--fix positioning of .book-container
--add backend so library stored locally
+
+First Iteration - COMPLETED
+Second Iteration:
+-Add backend so library stored locally
 
 Completed:
 -Set out and style page structure
@@ -11,6 +12,8 @@ Completed:
 -Make sort function from select form
 -Create check box that displays read/ non-read books
 -Fix bug that redisplays entire myLibrary array when read-status changed
+-Fix form remembering text from last time
+-Fix positioning of .book-container
 
 Future Iterations:
 -Add text input to allow a brief blurb for each book

@@ -1,9 +1,8 @@
-Today:
-
--create function that loops cards into Library array so they appear on container
-
 To do:
--add backend so library stored locally
+
+First Iteration - COMPLETED
+Second Iteration:
+-Add backend so library stored locally
 
 Completed:
 -Set out and style page structure
@@ -12,6 +11,9 @@ Completed:
 -Add toggle that switches book's read status
 -Make sort function from select form
 -Create check box that displays read/ non-read books
+-Fix bug that redisplays entire myLibrary array when read-status changed
+-Fix form remembering text from last time
+-Fix positioning of .book-container
 
 Future Iterations:
 -Add text input to allow a brief blurb for each book
